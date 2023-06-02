@@ -16,7 +16,7 @@ const NoteList: FC<NoteListProps> = ({
   dispatch
 }) => {
   return (
-    <div>
+    <div className='notes-list'>
       <h3 className='notes-list-title'>Liste des notes</h3>
       <div className='notes-list-table-container'>
         <table className='notes-list-table'>
@@ -31,10 +31,10 @@ const NoteList: FC<NoteListProps> = ({
             </tr>
           </thead>
           <tbody>
-            {notes.map((contact) => (
+            {notes.map((note) => (
                 <NoteItem
-                    key={contact.id}
-                    {...contact}
+                    key={note.id}
+                    {...note}
                     handleEdit={handleEdit}
                     dispatch={dispatch}
                 />

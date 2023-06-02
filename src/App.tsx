@@ -32,7 +32,7 @@ function App() {
 	return (
 		<>
 		<header>
-      		<h1>Contact Manager App</h1>
+      		<h1>Gestion des notes</h1>
     	</header>
 		<NoteTypeForm
           dispatch={dispatch}

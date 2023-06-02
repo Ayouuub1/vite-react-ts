@@ -18,7 +18,7 @@ const NoteEditFormType: FC<EditModalProps> = ({
   dispatch
 }) => {
   return (
-    <Modal show={showModal} onHide={toggleModal}>
+    <Modal show={showModal} onHide={toggleModal} className='note-edit-form'>
       <Modal.Header closeButton>
         <Modal.Title>Modifier la note</Modal.Title>
       </Modal.Header>
