@@ -50,7 +50,7 @@ const NoteItem: FC<Note & ExtraProps> = ({
               });
             }
           }}
-          className='icon'
+          className='icon-delete'
         />
       </td>
     </tr>

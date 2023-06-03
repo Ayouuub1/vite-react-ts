@@ -1,7 +1,9 @@
 describe('Should test adding new rates', () => {
+    beforeEach(() => {
+        cy.visit('/');
+      });
 
     it('devrait afficher le formulaire de note', () => {
-        cy.visit('/'),
         cy.get('form.note-form').should('exist');
         cy.get('input[name="title"]').should('exist');
         cy.get('input[name="rate"]').should('exist');
@@ -10,7 +12,6 @@ describe('Should test adding new rates', () => {
     });
 
     it('devrait soumettre le formulaire avec des champs valides', () => {
-        cy.visit('/'),
         cy.get('input[name="title"]').type('Titre de la note');
         cy.get('input[name="rate"]').type('5');
         cy.get('input[name="comment"]').type('Ceci est un commentaire de test');
@@ -18,7 +19,6 @@ describe('Should test adding new rates', () => {
     });
 
     it("devrait pas soumettre le formulaire s'il manque un ou plusieurs champs", () => {
-        cy.visit('/'),
         cy.get('input[name="title"]').type('Titre de la note');
         cy.get('input[name="comment"]').type('Ceci est un commentaire de test');
         cy.get('button[type="submit"]').click();

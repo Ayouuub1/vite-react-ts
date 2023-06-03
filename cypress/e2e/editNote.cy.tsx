@@ -5,7 +5,6 @@ describe('Should test edit rates', () => {
       });
 
       it('devrait afficher le formulaire de modification et modifier la note', () => {
-          cy.visit('/'),
           cy.get('input[name="title"]').type('Titre de la note');
           cy.get('input[name="rate"]').type('5');
           cy.get('input[name="comment"]').type('Ceci est un commentaire de test');
